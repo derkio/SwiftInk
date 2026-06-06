@@ -51,8 +51,8 @@ public class StoryState {
         obj["variablesState"] = try variablesState!.writeJSON()
         obj["evalStack"] = writeListRuntimeObjs(evaluationStack)
         
-        if !divertedPointer!.isNull {
-            obj["currentDivertTarget"].string = divertedPointer!.path!.componentsString
+        if let divertedPointer, !divertedPointer.isNull {
+       obj["currentDivertTarget"].string = divertedPointer.path!.componentsString
         }
         
         obj["visitCounts"] = JSON(_visitCounts)
