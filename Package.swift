@@ -11,6 +11,10 @@ let package = Package(
             name: "SwiftInk",
             targets: ["SwiftInk"]),
     ],
+    platforms: [
+    .iOS(.v16),
+    .watchOS(.v9),
+    ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
         // .package(url: /* package url */, from: "1.0.0"),
